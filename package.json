@@ -6,21 +6,45 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:a11y": "vitest run tests/a11y",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
+    "db:migrate": "prisma migrate dev",
+    "db:studio": "prisma studio",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@arcnovus/wet-boew-react": "^2.0.0-beta.9",
+    "@cdssnc/gcds-components-react-ssr": "^0.46.0-canary.0",
+    "@prisma/client": "^7.3.0",
     "next": "16.1.6",
+    "next-auth": "^5.0.0-beta.30",
+    "next-intl": "^4.8.2",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/react": "^16.3.2",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^5.1.3",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "jsdom": "^28.0.0",
+    "prisma": "^7.3.0",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^4.0.18",
+    "vitest-axe": "^0.1.0"
   }
 }

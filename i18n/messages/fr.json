@@ -1,0 +1,80 @@
+{
+  "common": {
+    "governmentOfCanada": "Gouvernement du Canada",
+    "languageToggle": "English",
+    "skipToMain": "Passer au contenu principal",
+    "search": "Recherche",
+    "menu": "Menu"
+  },
+  "splash": {
+    "title": "Government of Canada",
+    "subtitle": "Gouvernement du Canada",
+    "english": "English",
+    "french": "Français",
+    "terms": "Avis",
+    "termsLink": "https://www.canada.ca/fr/transparence/avis.html"
+  },
+  "home": {
+    "title": "Bienvenue",
+    "description": "Bienvenue dans le cadre d'application du gouvernement du Canada."
+  },
+  "navigation": {
+    "home": "Accueil",
+    "about": "À propos",
+    "contact": "Contact",
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "profile": "Profil"
+  },
+  "auth": {
+    "signIn": "Se connecter",
+    "signOut": "Se déconnecter",
+    "signInWith": "Se connecter avec {provider}",
+    "unauthorized": "Vous n'êtes pas autorisé à accéder à cette page.",
+    "sessionExpired": "Votre session a expiré. Veuillez vous reconnecter."
+  },
+  "footer": {
+    "allContacts": "Toutes les coordonnées",
+    "departments": "Ministères et organismes",
+    "aboutGovernment": "À propos du gouvernement",
+    "jobs": "Emplois",
+    "immigration": "Immigration et citoyenneté",
+    "travel": "Voyage et tourisme",
+    "business": "Entreprises",
+    "benefits": "Prestations",
+    "health": "Santé",
+    "taxes": "Impôts",
+    "environment": "Environnement et ressources naturelles",
+    "nationalSecurity": "Sécurité nationale et défense",
+    "culture": "Culture, histoire et sport",
+    "policing": "Services de police, justice et urgences",
+    "transport": "Transport et infrastructure",
+    "canadaWorld": "Canada et le monde",
+    "money": "Argent et finances",
+    "science": "Science et innovation",
+    "indigenous": "Autochtones",
+    "veterans": "Vétérans et militaires",
+    "youth": "Jeunesse",
+    "socialMedia": "Médias sociaux",
+    "mobileApplications": "Applications mobiles",
+    "aboutCanadaCa": "À propos de Canada.ca",
+    "termsConditions": "Avis",
+    "privacy": "Confidentialité",
+    "topOfPage": "Haut de la page",
+    "dateModified": "Date de modification :"
+  },
+  "errors": {
+    "notFound": "Page non trouvée",
+    "notFoundDescription": "La page que vous recherchez n'existe pas.",
+    "serverError": "Erreur du serveur",
+    "serverErrorDescription": "Une erreur inattendue s'est produite. Veuillez réessayer plus tard.",
+    "accessDenied": "Accès refusé",
+    "accessDeniedDescription": "Vous n'avez pas la permission d'accéder à cette ressource."
+  },
+  "validation": {
+    "required": "Ce champ est requis",
+    "email": "Veuillez entrer une adresse courriel valide",
+    "minLength": "Doit contenir au moins {min} caractères",
+    "maxLength": "Ne doit pas dépasser {max} caractères"
+  }
+}

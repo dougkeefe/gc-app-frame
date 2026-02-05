@@ -1,0 +1,56 @@
+{
+  "version": "1.0.0",
+  "projectName": "gc-app-frame",
+  "description": "Government of Canada compliant Next.js framework",
+  "technicalStandards": ".candid/Technical.md",
+  "review": {
+    "defaultTone": "constructive",
+    "autoCommit": false,
+    "categories": {
+      "architecture": {
+        "enabled": true,
+        "severity": "error"
+      },
+      "naming": {
+        "enabled": true,
+        "severity": "warning"
+      },
+      "security": {
+        "enabled": true,
+        "severity": "error"
+      },
+      "testing": {
+        "enabled": true,
+        "severity": "warning"
+      },
+      "react": {
+        "enabled": true,
+        "severity": "error"
+      },
+      "gcds": {
+        "enabled": true,
+        "severity": "warning"
+      }
+    }
+  },
+  "ignore": {
+    "files": [
+      "node_modules/**",
+      ".next/**",
+      "dist/**",
+      "coverage/**",
+      "*.min.js",
+      "prisma/migrations/**"
+    ],
+    "rules": []
+  },
+  "ci": {
+    "blockOnError": true,
+    "blockOnWarning": false,
+    "requiredCategories": ["security", "architecture"]
+  },
+  "generated": {
+    "date": "2026-02-05",
+    "tool": "candid-init"
+  }
+}

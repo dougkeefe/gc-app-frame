@@ -1,26 +1,73 @@
 @import "tailwindcss";
 
+/* Import GCDS styles */
+@import "@cdssnc/gcds-components-react-ssr/gcds.css";
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #333333;
+  /* GC brand colors */
+  --gc-red: #af3c43;
+  --gc-blue: #26374a;
+  --gc-link: #284162;
+  --gc-visited: #7834bc;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-gc-red: var(--gc-red);
+  --color-gc-blue: var(--gc-blue);
+  --color-gc-link: var(--gc-link);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Noto Sans", sans-serif;
+}
+
+/* Skip link styles for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--gc-blue);
+  color: white;
+  padding: 8px 16px;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 3px solid var(--gc-blue);
+  outline-offset: 2px;
+}
+
+/* Link styles matching Canada.ca */
+a {
+  color: var(--gc-link);
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--gc-visited);
+}
+
+a:hover,
+a:focus {
+  color: var(--gc-link);
+  text-decoration: none;
+}
+
+/* Container utility */
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }

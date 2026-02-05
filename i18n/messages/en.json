@@ -1,0 +1,80 @@
+{
+  "common": {
+    "governmentOfCanada": "Government of Canada",
+    "languageToggle": "Français",
+    "skipToMain": "Skip to main content",
+    "search": "Search",
+    "menu": "Menu"
+  },
+  "splash": {
+    "title": "Government of Canada",
+    "subtitle": "Gouvernement du Canada",
+    "english": "English",
+    "french": "Français",
+    "terms": "Terms and conditions",
+    "termsLink": "https://www.canada.ca/en/transparency/terms.html"
+  },
+  "home": {
+    "title": "Welcome",
+    "description": "Welcome to the Government of Canada application framework."
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "login": "Login",
+    "logout": "Logout",
+    "profile": "Profile"
+  },
+  "auth": {
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "signInWith": "Sign in with {provider}",
+    "unauthorized": "You are not authorized to access this page.",
+    "sessionExpired": "Your session has expired. Please sign in again."
+  },
+  "footer": {
+    "allContacts": "All contacts",
+    "departments": "Departments and agencies",
+    "aboutGovernment": "About government",
+    "jobs": "Jobs",
+    "immigration": "Immigration and citizenship",
+    "travel": "Travel and tourism",
+    "business": "Business",
+    "benefits": "Benefits",
+    "health": "Health",
+    "taxes": "Taxes",
+    "environment": "Environment and natural resources",
+    "nationalSecurity": "National security and defence",
+    "culture": "Culture, history and sport",
+    "policing": "Policing, justice and emergencies",
+    "transport": "Transport and infrastructure",
+    "canadaWorld": "Canada and the world",
+    "money": "Money and finance",
+    "science": "Science and innovation",
+    "indigenous": "Indigenous peoples",
+    "veterans": "Veterans and military",
+    "youth": "Youth",
+    "socialMedia": "Social media",
+    "mobileApplications": "Mobile applications",
+    "aboutCanadaCa": "About Canada.ca",
+    "termsConditions": "Terms and conditions",
+    "privacy": "Privacy",
+    "topOfPage": "Top of page",
+    "dateModified": "Date modified:"
+  },
+  "errors": {
+    "notFound": "Page not found",
+    "notFoundDescription": "The page you are looking for does not exist.",
+    "serverError": "Server error",
+    "serverErrorDescription": "An unexpected error occurred. Please try again later.",
+    "accessDenied": "Access denied",
+    "accessDeniedDescription": "You do not have permission to access this resource."
+  },
+  "validation": {
+    "required": "This field is required",
+    "email": "Please enter a valid email address",
+    "minLength": "Must be at least {min} characters",
+    "maxLength": "Must be no more than {max} characters"
+  }
+}
