@@ -64,7 +64,7 @@ app/[locale]/(admin)/           # Requires admin role
 
 ### ARCH-007: Extension Independence
 **Severity:** error
-**Description:** Prisma extensions (softDelete, audit, compliance) must be independent and composable. Each extension should work standalone.
+**Description:** Prisma extensions (softDelete, audit, compliance) must be independent and composable. Each extension must function independently without requiring other extensions to be loaded.
 
 ### ARCH-008: Compliance Field Requirements
 **Severity:** error
@@ -83,8 +83,8 @@ app/[locale]/(admin)/           # Requires admin role
 **Description:** All secrets must be in environment variables, never hardcoded. Use `.env.local` for local development, never commit `.env` files.
 
 ### ARCH-012: Module Boundaries
-**Severity:** warning
-**Description:** Each `lib/` subdirectory should have a clear public API. Export from index files, keep internal implementation private.
+**Severity:** error
+**Description:** Each `lib/` subdirectory must export its public API from an `index.ts` file. Internal modules must not be imported directly from outside the subdirectory.
 
 ---
 
@@ -195,8 +195,8 @@ if (!session) redirect("/login");
 ```
 
 ### SEC-011: Secure Defaults
-**Severity:** warning
-**Description:** Default to most restrictive settings. Security classification defaults to PROTECTED_A unless explicitly set lower.
+**Severity:** error
+**Description:** Default security classification must be PROTECTED_A. Default permissions must be deny-all until explicitly granted. New models must not default to UNCLASSIFIED.
 
 ### SEC-012: No Secrets in Code
 **Severity:** error
@@ -233,7 +233,10 @@ it("has no accessibility violations", async () => {
 
 ### TEST-003: WCAG AA Compliance
 **Severity:** error
-**Description:** All components must meet WCAG 2.1 AA standards. Focus states, color contrast, and keyboard navigation required.
+**Description:** All components must meet WCAG 2.1 AA standards:
+- Focus states must be visible (minimum 2px outline or equivalent)
+- Color contrast must meet 4.5:1 for normal text, 3:1 for large text
+- All interactive elements must be keyboard accessible (Tab, Enter, Space, Escape)
 
 ### TEST-004: Test File Location
 **Severity:** warning
@@ -244,8 +247,8 @@ it("has no accessibility violations", async () => {
 **Description:** Mock next-intl, next/navigation, and next-auth in test setup. See `tests/setup.ts` for patterns.
 
 ### TEST-006: Coverage Requirements
-**Severity:** warning
-**Description:** Aim for 80% coverage on `lib/` business logic. All auth and RBAC functions must have test coverage.
+**Severity:** error
+**Description:** Code coverage for `lib/` must be at least 80%. Auth functions in `lib/auth/` and RBAC functions must have 100% coverage.
 
 ### TEST-007: Integration Test Patterns
 **Severity:** warning
@@ -314,16 +317,18 @@ return <h1>{t("title")}</h1>;
 **Description:** All app routes must be under `[locale]` dynamic segment. Use `Link` and `redirect` with locale prefix.
 
 ### REACT-006: Image Optimization
-**Severity:** warning
-**Description:** Use `next/image` for all images. Provide width, height, and alt text. Use priority for LCP images.
+**Severity:** error
+**Description:** All images must use the `next/image` component. Images must include explicit `width` and `height` props. Images in the initial viewport (above the fold) must include the `priority` prop.
+
+> **Note:** Alt text is enforced by ESLint `jsx-a11y/alt-text` rule.
 
 ### REACT-007: No Direct DOM Manipulation
 **Severity:** error
 **Description:** Never use `document.querySelector` or direct DOM manipulation. Use React refs and state.
 
 ### REACT-008: Error Boundary Usage
-**Severity:** warning
-**Description:** Wrap complex features in error boundaries. Use `error.tsx` files for route-level error handling.
+**Severity:** error
+**Description:** Features with external API calls, file uploads, or user-generated content rendering must be wrapped in error boundaries. Use `error.tsx` files for route-level error handling.
 
 ### REACT-009: Loading States
 **Severity:** warning
@@ -337,17 +342,21 @@ return <h1>{t("title")}</h1>;
 **Severity:** error
 **Description:** Use `next/link` for all internal navigation. Never use `<a href>` for internal links.
 
+> **Note:** Also enforced by ESLint `@next/next/no-html-link-for-pages` rule.
+
 ### REACT-012: Form Accessibility
 **Severity:** error
 **Description:** All form inputs must have associated labels. Use `htmlFor` attribute or wrap input in label element.
+
+> **Note:** Also enforced by ESLint `jsx-a11y/label-has-associated-control` rule.
 
 ---
 
 ## 6. GC Design System Rules
 
 ### GCDS-001: Use Official Components
-**Severity:** warning
-**Description:** Prefer GCDS components (`@cdssnc/gcds-components-react-ssr`) over custom implementations for standard UI elements.
+**Severity:** error
+**Description:** Use GCDS components (`@cdssnc/gcds-components-react-ssr`) for: buttons, forms, headers, footers, navigation, and alerts. Custom components are only permitted when GCDS lacks equivalent functionality.
 
 ### GCDS-002: Bilingual Content
 **Severity:** error
@@ -385,4 +394,5 @@ return <h1>{t("title")}</h1>;
 
 | Date | Version | Changes |
 |------|---------|---------|
+| 2026-02-05 | 1.1.0 | Validation fixes: strengthened vague rules, added thresholds, noted linter overlaps |
 | 2026-02-05 | 1.0.0 | Initial generation from codebase analysis |
