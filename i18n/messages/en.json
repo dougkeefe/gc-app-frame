@@ -24,14 +24,24 @@
     "contact": "Contact",
     "login": "Login",
     "logout": "Logout",
-    "profile": "Profile"
+    "profile": "Profile",
+    "overview": "Overview"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcomeBack": "Welcome back!",
+    "name": "Name",
+    "email": "Email",
+    "notProvided": "Not provided"
   },
   "auth": {
     "signIn": "Sign in",
     "signOut": "Sign out",
     "signInWith": "Sign in with {provider}",
     "unauthorized": "You are not authorized to access this page.",
-    "sessionExpired": "Your session has expired. Please sign in again."
+    "sessionExpired": "Your session has expired. Please sign in again.",
+    "or": "or",
+    "comingSoon": "Coming soon"
   },
   "footer": {
     "allContacts": "All contacts",

@@ -64,7 +64,7 @@ function LoginContent({
             </div>
             <div className="relative flex justify-center text-sm">
               <span className="bg-white px-2 text-gray-500">
-                {locale === "fr" ? "ou" : "or"}
+                {t("or")}
               </span>
             </div>
           </div>
@@ -73,13 +73,11 @@ function LoginContent({
             type="button"
             disabled
             className="flex w-full items-center justify-center gap-2 rounded border border-gray-300 bg-gray-100 px-4 py-3 text-gray-400 cursor-not-allowed"
-            title={
-              locale === "fr" ? "Bientôt disponible" : "Coming soon"
-            }
+            title={t("comingSoon")}
           >
             {t("signInWith", { provider: "GCKey" })}
             <span className="text-xs">
-              ({locale === "fr" ? "Bientôt disponible" : "Coming soon"})
+              ({t("comingSoon")})
             </span>
           </button>
         </div>

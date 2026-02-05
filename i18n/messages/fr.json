@@ -24,14 +24,24 @@
     "contact": "Contact",
     "login": "Connexion",
     "logout": "Déconnexion",
-    "profile": "Profil"
+    "profile": "Profil",
+    "overview": "Aperçu"
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "welcomeBack": "Bienvenue!",
+    "name": "Nom",
+    "email": "Courriel",
+    "notProvided": "Non fourni"
   },
   "auth": {
     "signIn": "Se connecter",
     "signOut": "Se déconnecter",
     "signInWith": "Se connecter avec {provider}",
     "unauthorized": "Vous n'êtes pas autorisé à accéder à cette page.",
-    "sessionExpired": "Votre session a expiré. Veuillez vous reconnecter."
+    "sessionExpired": "Votre session a expiré. Veuillez vous reconnecter.",
+    "or": "ou",
+    "comingSoon": "Bientôt disponible"
   },
   "footer": {
     "allContacts": "Toutes les coordonnées",

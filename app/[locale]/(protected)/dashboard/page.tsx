@@ -29,7 +29,8 @@ function DashboardContent({
   session: { user: { name?: string | null; email?: string | null } };
   locale: string;
 }) {
-  const t = useTranslations("navigation");
+  const tNav = useTranslations("navigation");
+  const tDash = useTranslations("dashboard");
 
   const sidebar = (
     <ul className="space-y-2">
@@ -38,7 +39,7 @@ function DashboardContent({
           href={`/${locale}/dashboard`}
           className="block rounded px-4 py-2 hover:bg-gray-200"
         >
-          Overview
+          {tNav("overview")}
         </Link>
       </li>
       <li>
@@ -46,7 +47,7 @@ function DashboardContent({
           href={`/${locale}/dashboard/profile`}
           className="block rounded px-4 py-2 hover:bg-gray-200"
         >
-          {t("profile")}
+          {tNav("profile")}
         </Link>
       </li>
     </ul>
@@ -60,19 +61,19 @@ function DashboardContent({
       ]}
       sidebar={sidebar}
     >
-      <h1 className="mb-4 text-3xl font-bold">Dashboard</h1>
+      <h1 className="mb-4 text-3xl font-bold">{tDash("title")}</h1>
 
       <div className="rounded border border-gray-200 bg-white p-6 shadow-sm">
-        <h2 className="mb-4 text-xl font-semibold">Welcome back!</h2>
+        <h2 className="mb-4 text-xl font-semibold">{tDash("welcomeBack")}</h2>
 
         <dl className="space-y-2">
           <div>
-            <dt className="font-medium text-gray-600">Name</dt>
-            <dd>{session.user.name || "Not provided"}</dd>
+            <dt className="font-medium text-gray-600">{tDash("name")}</dt>
+            <dd>{session.user.name || tDash("notProvided")}</dd>
           </div>
           <div>
-            <dt className="font-medium text-gray-600">Email</dt>
-            <dd>{session.user.email || "Not provided"}</dd>
+            <dt className="font-medium text-gray-600">{tDash("email")}</dt>
+            <dd>{session.user.email || tDash("notProvided")}</dd>
           </div>
         </dl>
       </div>
