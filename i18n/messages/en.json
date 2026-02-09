@@ -12,7 +12,9 @@
     "english": "English",
     "french": "Français",
     "terms": "Terms and conditions",
-    "termsLink": "https://www.canada.ca/en/transparency/terms.html"
+    "termsLink": "https://www.canada.ca/en/transparency/terms.html",
+    "sigAlt": "Government of Canada / Gouvernement du Canada",
+    "wmmsAlt": "Symbol of the Government of Canada / Symbole du gouvernement du Canada"
   },
   "home": {
     "title": "Welcome",
@@ -86,5 +88,9 @@
     "email": "Please enter a valid email address",
     "minLength": "Must be at least {min} characters",
     "maxLength": "Must be no more than {max} characters"
+  },
+  "metadata": {
+    "title": "Government of Canada",
+    "description": "Government of Canada Application Framework"
   }
 }

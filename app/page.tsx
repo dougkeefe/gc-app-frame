@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import enMessages from "@/i18n/messages/en.json";
+import frMessages from "@/i18n/messages/fr.json";
 
 /**
  * Canada.ca Splash Page
@@ -8,11 +10,14 @@ import Link from "next/link";
  * Canada.ca splash page pattern (FIP compliant).
  */
 export default function SplashPage() {
+  const en = enMessages.splash;
+  const fr = frMessages.splash;
+
   return (
-    <html lang="en">
+    <html lang="mul">
       <head>
         <title>
-          Government of Canada / Gouvernement du Canada
+          {en.title} / {fr.subtitle}
         </title>
       </head>
       <body>
@@ -20,7 +25,7 @@ export default function SplashPage() {
           <div className="mb-12 text-center">
             <Image
               src="https://www.canada.ca/etc/designs/canada/wet-boew/assets/sig-blk-en.svg"
-              alt="Government of Canada / Gouvernement du Canada"
+              alt={en.sigAlt}
               width={320}
               height={34}
               className="mx-auto h-auto w-80"
@@ -34,39 +39,39 @@ export default function SplashPage() {
               lang="en"
               className="rounded border border-[#26374a] px-8 py-3 text-lg text-[#26374a] hover:bg-[#26374a] hover:text-white"
             >
-              English
+              {en.english}
             </Link>
             <Link
               href="/fr"
               lang="fr"
               className="rounded border border-[#26374a] px-8 py-3 text-lg text-[#26374a] hover:bg-[#26374a] hover:text-white"
             >
-              Français
+              {en.french}
             </Link>
           </div>
 
           <div className="mt-16 text-center text-sm text-gray-600">
             <Link
-              href="https://www.canada.ca/en/transparency/terms.html"
+              href={en.termsLink}
               lang="en"
               className="text-[#26374a] underline hover:no-underline"
             >
-              Terms &amp; conditions
+              {en.terms}
             </Link>
             {" / "}
             <Link
-              href="https://www.canada.ca/fr/transparence/avis.html"
+              href={fr.termsLink}
               lang="fr"
               className="text-[#26374a] underline hover:no-underline"
             >
-              Avis
+              {fr.terms}
             </Link>
           </div>
 
           <div className="mt-8">
             <Image
               src="https://www.canada.ca/etc/designs/canada/wet-boew/assets/wmms-blk.svg"
-              alt="Symbol of the Government of Canada / Symbole du gouvernement du Canada"
+              alt={en.wmmsAlt}
               width={160}
               height={25}
               className="h-auto w-40"
