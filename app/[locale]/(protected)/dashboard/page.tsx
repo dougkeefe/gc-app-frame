@@ -60,6 +60,7 @@ function DashboardContent({
         { href: "/dashboard", labelKey: "profile" },
       ]}
       sidebar={sidebar}
+      dateModified="2026-02-08"
     >
       <h1 className="mb-4 text-3xl font-bold">{tDash("title")}</h1>
 

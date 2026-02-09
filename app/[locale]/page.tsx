@@ -21,6 +21,7 @@ function HomeContent() {
       navItems={[
         { href: "/", labelKey: "home" },
       ]}
+      dateModified="2026-02-08"
     >
       <h1 className="mb-4 text-3xl font-bold">{t("title")}</h1>
       <p className="text-lg">{t("description")}</p>
