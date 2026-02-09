@@ -1,7 +1,9 @@
+/* Import Noto Sans from Google Fonts - must precede all other rules */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+
 @import "tailwindcss";
 
-/* Import GCDS styles */
-@import "@cdssnc/gcds-components-react-ssr/gcds.css";
+/* GCDS styles are loaded via GcdsWrapper component (components/gcds/GcdsWrapper.tsx) */
 
 :root {
   --background: #ffffff;
@@ -9,7 +11,7 @@
   /* GC brand colors */
   --gc-red: #af3c43;
   --gc-blue: #26374a;
-  --gc-link: #284162;
+  --gc-link: #26374a;
   --gc-visited: #7834bc;
 }
 
@@ -24,7 +26,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans", Helvetica, Arial, sans-serif;
 }
 
 /* Skip link styles for accessibility */

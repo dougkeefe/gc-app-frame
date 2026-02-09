@@ -1,6 +1,6 @@
 "use client";
 
-import { GcdsWrapper, Header, Footer } from "@/components/gcds";
+import { GcdsWrapper, Header, Footer, DateModified } from "@/components/gcds";
 
 interface AppTemplateProps {
   children: React.ReactNode;
@@ -11,6 +11,8 @@ interface AppTemplateProps {
     href: string;
     labelKey: string;
   }[];
+  /** Last modified date in YYYY-MM-DD format */
+  dateModified?: string;
 }
 
 /**
@@ -27,6 +29,7 @@ export function AppTemplate({
   navItems = [
     { href: "/", labelKey: "home" },
   ],
+  dateModified,
 }: AppTemplateProps) {
   return (
     <GcdsWrapper>
@@ -42,6 +45,7 @@ export function AppTemplate({
           className="flex-1 px-6 py-8"
         >
           {children}
+          {dateModified && <DateModified date={dateModified} />}
         </main>
       </div>
       <Footer display="compact" />

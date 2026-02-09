@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { signIn } from "@/auth";
 import { DefaultTemplate } from "@/components/layouts";
+import { GcdsButton } from "@cdssnc/gcds-components-react-ssr";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -39,14 +40,12 @@ function LoginContent({
 
         <div className="space-y-4">
           <form action={handleAzureSignIn}>
-            <button
-              type="submit"
-              className="flex w-full items-center justify-center gap-2 rounded border border-gray-300 bg-white px-4 py-3 text-gray-700 hover:bg-gray-50"
-            >
+            <GcdsButton type="submit" buttonRole="secondary" size="regular">
               <svg
                 className="h-5 w-5"
                 viewBox="0 0 21 21"
                 xmlns="http://www.w3.org/2000/svg"
+                slot="left"
               >
                 <rect x="1" y="1" width="9" height="9" fill="#f25022" />
                 <rect x="11" y="1" width="9" height="9" fill="#7fba00" />
@@ -54,7 +53,7 @@ function LoginContent({
                 <rect x="11" y="11" width="9" height="9" fill="#ffb900" />
               </svg>
               {t("signInWith", { provider: "Microsoft" })}
-            </button>
+            </GcdsButton>
           </form>
 
           {/* GCKey login - placeholder for future implementation */}
@@ -69,17 +68,18 @@ function LoginContent({
             </div>
           </div>
 
-          <button
+          <GcdsButton
             type="button"
+            buttonRole="secondary"
+            size="regular"
             disabled
-            className="flex w-full items-center justify-center gap-2 rounded border border-gray-300 bg-gray-100 px-4 py-3 text-gray-400 cursor-not-allowed"
-            title={t("comingSoon")}
           >
             {t("signInWith", { provider: "GCKey" })}
+            {" "}
             <span className="text-xs">
               ({t("comingSoon")})
             </span>
-          </button>
+          </GcdsButton>
         </div>
       </div>
     </DefaultTemplate>

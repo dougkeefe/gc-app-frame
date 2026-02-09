@@ -1,6 +1,6 @@
 "use client";
 
-import { GcdsWrapper, Header, Footer } from "@/components/gcds";
+import { GcdsWrapper, Header, Footer, DateModified } from "@/components/gcds";
 
 interface DefaultTemplateProps {
   children: React.ReactNode;
@@ -9,6 +9,8 @@ interface DefaultTemplateProps {
     href: string;
     labelKey: string;
   }[];
+  /** Last modified date in YYYY-MM-DD format */
+  dateModified?: string;
 }
 
 /**
@@ -24,12 +26,14 @@ export function DefaultTemplate({
   navItems = [
     { href: "/", labelKey: "home" },
   ],
+  dateModified,
 }: DefaultTemplateProps) {
   return (
     <GcdsWrapper>
       <Header navItems={navItems} />
       <main id="main-content" className="container mx-auto px-4 py-8">
         {children}
+        {dateModified && <DateModified date={dateModified} />}
       </main>
       <Footer />
     </GcdsWrapper>
