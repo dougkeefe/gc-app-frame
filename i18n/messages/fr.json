@@ -12,7 +12,9 @@
     "english": "English",
     "french": "Français",
     "terms": "Avis",
-    "termsLink": "https://www.canada.ca/fr/transparence/avis.html"
+    "termsLink": "https://www.canada.ca/fr/transparence/avis.html",
+    "sigAlt": "Gouvernement du Canada / Government of Canada",
+    "wmmsAlt": "Symbole du gouvernement du Canada / Symbol of the Government of Canada"
   },
   "home": {
     "title": "Bienvenue",
@@ -86,5 +88,9 @@
     "email": "Veuillez entrer une adresse courriel valide",
     "minLength": "Doit contenir au moins {min} caractères",
     "maxLength": "Ne doit pas dépasser {max} caractères"
+  },
+  "metadata": {
+    "title": "Gouvernement du Canada",
+    "description": "Cadre d'application du gouvernement du Canada"
   }
 }
