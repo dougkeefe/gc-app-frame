@@ -19,3 +19,4 @@ export {
 } from "./rbac";
 export { azureAdProvider } from "./providers/azure-ad";
 export { gcKeyProvider } from "./providers/gckey";
+export { federatedSignOut } from "./actions";

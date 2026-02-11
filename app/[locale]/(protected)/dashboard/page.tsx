@@ -4,6 +4,7 @@ import { auth } from "@/auth";
 import { redirect } from "next/navigation";
 import Link from "next/link";
 import { AppTemplate } from "@/components/layouts";
+import { SignOutButton } from "@/components/auth/SignOutButton";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -33,24 +34,29 @@ function DashboardContent({
   const tDash = useTranslations("dashboard");
 
   const sidebar = (
-    <ul className="space-y-2">
-      <li>
-        <Link
-          href={`/${locale}/dashboard`}
-          className="block rounded px-4 py-2 hover:bg-gray-200"
-        >
-          {tNav("overview")}
-        </Link>
-      </li>
-      <li>
-        <Link
-          href={`/${locale}/dashboard/profile`}
-          className="block rounded px-4 py-2 hover:bg-gray-200"
-        >
-          {tNav("profile")}
-        </Link>
-      </li>
-    </ul>
+    <div className="flex h-full flex-col justify-between">
+      <ul className="space-y-2">
+        <li>
+          <Link
+            href={`/${locale}/dashboard`}
+            className="block rounded px-4 py-2 hover:bg-gray-200"
+          >
+            {tNav("overview")}
+          </Link>
+        </li>
+        <li>
+          <Link
+            href={`/${locale}/dashboard/profile`}
+            className="block rounded px-4 py-2 hover:bg-gray-200"
+          >
+            {tNav("profile")}
+          </Link>
+        </li>
+      </ul>
+      <div className="border-t border-gray-200 pt-4">
+        <SignOutButton />
+      </div>
+    </div>
   );
 
   return (

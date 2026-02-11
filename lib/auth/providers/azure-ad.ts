@@ -16,7 +16,9 @@ export const azureAdProvider = MicrosoftEntraID({
   issuer: `https://login.microsoftonline.com/${process.env.AZURE_AD_TENANT_ID}/v2.0`,
   authorization: {
     params: {
-      scope: "openid profile email User.Read",
+      // Minimal scopes per Privacy Act / ITSG-33 AC-6 (Least Privilege)
+      // Only add User.Read if Microsoft Graph /me endpoint is needed
+      scope: "openid profile email",
     },
   },
   profile(profile) {
