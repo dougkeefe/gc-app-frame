@@ -42,7 +42,7 @@ npm run start            # Start production server
 
 All routes use locale-based sub-path routing (`/en/*`, `/fr/*`):
 
-- `/app/page.tsx` - Splash page (language selection, uses WET SplashTemplate)
+- `/app/page.tsx` - Splash page (language selection)
 - `/app/[locale]/` - Locale-wrapped routes with `NextIntlClientProvider`
 - `/app/[locale]/(auth)/` - Public auth routes (login)
 - `/app/[locale]/(protected)/` - Routes requiring authentication

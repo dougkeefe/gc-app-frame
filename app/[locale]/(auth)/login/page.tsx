@@ -46,6 +46,8 @@ function LoginContent({
                 viewBox="0 0 21 21"
                 xmlns="http://www.w3.org/2000/svg"
                 slot="left"
+                aria-hidden="true"
+                focusable="false"
               >
                 <rect x="1" y="1" width="9" height="9" fill="#f25022" />
                 <rect x="11" y="1" width="9" height="9" fill="#7fba00" />
@@ -73,6 +75,7 @@ function LoginContent({
             buttonRole="secondary"
             size="regular"
             disabled
+            aria-disabled="true"
           >
             {t("signInWith", { provider: "GCKey" })}
             {" "}

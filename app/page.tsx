@@ -21,7 +21,10 @@ export default function SplashPage() {
         </title>
       </head>
       <body>
-        <div className="flex min-h-screen flex-col items-center justify-center bg-white">
+        <main id="main-content" className="flex min-h-screen flex-col items-center justify-center bg-white">
+          <h1 className="sr-only">
+            {en.title} / {fr.subtitle}
+          </h1>
           <div className="mb-12 text-center">
             <Image
               src="https://www.canada.ca/etc/designs/canada/wet-boew/assets/sig-blk-en.svg"
@@ -37,14 +40,14 @@ export default function SplashPage() {
             <Link
               href="/en"
               lang="en"
-              className="rounded border border-[#26374a] px-8 py-3 text-lg text-[#26374a] hover:bg-[#26374a] hover:text-white"
+              className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded border border-[#26374a] px-8 py-3 text-lg text-[#26374a] hover:bg-[#26374a] hover:text-white"
             >
               {en.english}
             </Link>
             <Link
               href="/fr"
               lang="fr"
-              className="rounded border border-[#26374a] px-8 py-3 text-lg text-[#26374a] hover:bg-[#26374a] hover:text-white"
+              className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded border border-[#26374a] px-8 py-3 text-lg text-[#26374a] hover:bg-[#26374a] hover:text-white"
             >
               {en.french}
             </Link>
@@ -78,7 +81,7 @@ export default function SplashPage() {
               unoptimized
             />
           </div>
-        </div>
+        </main>
       </body>
     </html>
   );
